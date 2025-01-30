@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>0002</title>
+    <title>Nature's platter 0002</title>
+    <!-- font awesome kit -->
+    <script
+      src="https://kit.fontawesome.com/09153a20ac.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,9 +24,15 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- styles -->
-    <style>
+    <style type="text/tailwindcss">
       .sora {
         font-family: "Sora", serif;
+      }
+      .section-container {
+        @apply max-w-[1320px] mx-auto p-4;
+      }
+      .uni-padding {
+        padding: 140px 0;
       }
     </style>
     <script>
@@ -30,6 +41,9 @@
           extend: {
             colors: {
               clifford: "#da373d",
+              "green-primary": "#179800",
+              "black-text": "#111111",
+              "bg-color": "#EFEBE3",
             },
           },
         },
@@ -37,10 +51,71 @@
     </script>
   </head>
   <body>
-    <header></header>
-    <main>
-      <h1>Hello World</h1>
-    </main>
+    <!-- header section -->
+    <header class="bg-gradient-to-t from-[#EFEBE3] to-white">
+      <div class="section-container">
+        <nav class="flex justify-between items-center">
+          <div><img src="./assets/logo-header.png" alt="header logo" /></div>
+
+          <ul class="hidden lg:flex items-center text-xl text-black-text gap-8">
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+
+          <div class="hidden lg:flex items-center gap-6">
+            <div class="flex items-center gap-6">
+              <i
+                class="fa-solid fa-magnifying-glass text-2xl cursor-pointer"
+              ></i>
+              <i class="fa-solid fa-cart-shopping text-2xl cursor-pointer"></i>
+            </div>
+            <div class="flex items-center gap-3">
+              <button
+                class="text-xl border border-green-primary py-2 px-7 rounded-lg hover:bg-green-primary hover:text-white transition-all duration-200"
+              >
+                Login
+              </button>
+              <button
+                class="text-xl text-white bg-green-primary py-2 px-7 rounded-lg"
+              >
+                Register
+              </button>
+            </div>
+          </div>
+          <div class="lg:hidden">
+            <i
+              class="fa-solid fa-bars text-2xl cursor-pointer text-green-primary"
+            ></i>
+          </div>
+        </nav>
+        <!-- banner section -->
+        <section class="pt-20 flex flex-col justify-center">
+          <div class="text-center space-y-8">
+            <h1 class="text-[32px] md:text-[56px] font-semibold leading-tight">
+              Freshness
+              <span class="text-green-primary"
+                >You Can <br />
+                Count</span
+              >
+              On, Prices You’ll Love!
+            </h1>
+            <p class="text-base md:text-xl text-black-text md:w-2/3 mx-auto">
+              Shop your daily essentials at unbeatable prices. From fresh
+              produce to pantry staples, we’ve got you covered every day!
+            </p>
+          </div>
+          <div class="mt-9">
+            <img
+              class="w-full max-h-[840px] object-contain"
+              src="./assets/hero-vegetables.png"
+              alt=""
+            />
+          </div>
+        </section>
+      </div>
+    </header>
+    <main></main>
     <footer></footer>
   </body>
 </html>
